@@ -33,7 +33,9 @@ $ aws s3 ls --profile yourprofile
 |      +       | 5V       |
 |     out      | GPIO 4   |
 
-![Pic](/img/PiTempSensor.png)
+<p float="left">
+  <img src="./img/PiTempSensor.png" /> 
+</p>
 
 
 ## To Run
