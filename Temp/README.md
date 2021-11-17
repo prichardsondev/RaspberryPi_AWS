@@ -1,4 +1,4 @@
-## Push temp data from dht22 on PI to DynamoDB
+## Push temp data from dht22 on PI to DynamoDB table paul_tempdata
 ### run commands starting with $ at PI terminal - don't copy $
 
 ## Install nodejs
@@ -26,8 +26,37 @@ Default output format [None]: json
 
 $ aws s3 ls --profile yourprofile
 ```
+## connect DHT 11 temp sensor to Raspberry PI
+| Sensor Pin   | PI  Pin  |
+|--------------|----------|
+|      -       | Ground   |
+|      +       | 5V       |
+|     out      | GPIO 4   |
 
-## Dynamo - I'll update to show creation
+![Pic](/img/PiTempSensor.png)
+
+
+## To Run
+```
+$ git clone https://github.com/prichardsondev/RaspberryPi_AWS.git
+$ cd RaspberryPi_AWS/Temp
+$ npm i
+$ sudo nano writeToDynamo.js
+  add your aws profile name
+  ctrl + x
+  y
+$ sudo nano app.js
+  modify PK:YourOfficeTemp ex. PK:SallyOfficeTemp
+  ctrl + x
+  y
+
+$ node app.js
+
+browse to yourIP:3000/temp
+
+```
+
+## Dynamo - paul_tempdata
 ```
 Main Table
 

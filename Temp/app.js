@@ -18,7 +18,7 @@ app.get('/temp', (req, res) => {
     if (!err) {
 
       let Item = {
-        PK: "PaulOfficeTemp",
+        PK: "YourOfficeTemp",
         SK:SK,
         Temperature: parseFloat((temperature*1.8)+32),
       };

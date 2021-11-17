@@ -1,7 +1,7 @@
 var AWS = require("aws-sdk");
 
 const credentials = new AWS.SharedIniFileCredentials({
-  profile: "training",
+  profile: "yourprofile",
 });
 
 AWS.config.credentials = credentials;
