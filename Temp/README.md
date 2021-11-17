@@ -8,12 +8,10 @@ $ curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
 $ sudo apt-get install -y nodejs
 ```
 ## Install awscli
-### note this is v1.22 - you'd need to cmake git repo to get v2
+### note this is v1 - you'd need to cmake git repo to get v2
 
 ```
-$ pip install awscli
-
-$ export PATH=/home/pi/.local/bin:$PATH
+$ sudo apt-get install awscli
 
 $ aws --version
 aws-cli/1.22.7 Python/3.9.2 Linux/5.10.63-v7l+ botocore/1.23.7
